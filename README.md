@@ -46,11 +46,4 @@ Las contribuciones son bienvenidas. Por favor, lee `CONTRIBUTING.md` para detall
 
 ## Licencia
 
-Este proyecto está bajo la Licencia [MIT](LICENSE). Consulta el archivo `LICENSE` para obtener más detalles.
-```
-
-### Notas:
-
-- **URL del repositorio**: Deberás reemplazar `[URL del repositorio]` con la URL real de tu repositorio de Git.
-- **`CONTRIBUTING.md` y `LICENSE`**: Si tu proyecto tiene archivos específicos para contribuciones y licencia, menciónalos aquí. De lo contrario, puedes omitir o modificar estas secciones según sea necesario.
-- **Personalización**: Dependiendo de las características exactas de tu aplicación y cualquier otra información relevante (como configuraciones adicionales, opciones avanzadas, etc.), puedes modificar y ampliar este `README.md` para adaptarlo mejor a tu proyecto.
+Este proyecto está bajo la Licencia [MIT](LICENSE).
