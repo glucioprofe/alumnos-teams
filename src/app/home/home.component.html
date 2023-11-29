@@ -1,0 +1,26 @@
+<!-- home.component.html -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Menú Lateral -->
+    <nav class="col-md-2 sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['/']">Grupos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/preguntas']">Preguntas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/juego']">Juego</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Área de Contenido Principal -->
+    <main role="main" class="col-md-9 px-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

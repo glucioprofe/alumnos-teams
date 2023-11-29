@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <!-- Columna de Formulario -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Agregar Alumno</h5>
+          <form (submit)="agregarAlumno()">
+            <div class="mb-3">
+              <label for="nombreAlumno" class="form-label">Nombre del Alumno</label>
+              <input type="text" class="form-control" id="nombreAlumno" [(ngModel)]="nombreAlumno" name="nombre" placeholder="Ingrese el nombre">
+            </div>
+            <div class="mb-3">
+              <label for="grupoSelect" class="form-label">Seleccionar Grupo</label>
+              <select class="form-select" id="grupoSelect" [(ngModel)]="grupoSeleccionado" name="grupo">
+                <option value="grupo1">Grupo 1</option>
+                <option value="grupo2">Grupo 2</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columnas de Grupos -->
+    <div class="col-md-4" *ngFor="let grupo of grupos">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ grupo.nombre | titlecase }}</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let alumno of grupo.alumnos">
+              {{ alumno }}
+              <button (click)="eliminarAlumno(grupo.nombre, alumno)" class="btn btn-danger btn-sm float-end">Eliminar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="d-flex justify-content-around mb-3 bg-light p-3">
+    <h4>Puntaje G1: {{ puntajes.grupo1 }}</h4>
+    <h4>Puntaje G2: {{ puntajes.grupo2 }}</h4>
+  </div>
+
+
+  <div class="row mb-4">
+    <div class="col text-center">
+      <!-- Botón de sorteo -->
+      <button class="btn btn-primary" (click)="sortearEstudiante()">Sortear Estudiantes</button>
+
+      <!-- Indicador visual del temporizador -->
+      <div *ngIf="mostrarTemporizador" class="temporizador">
+        <svg height="50" width="50">
+          <circle cx="25" cy="25" r="20" stroke="black" stroke-width="3" fill="none"
+            stroke-dasharray="125.6" [attr.stroke-dashoffset]="temporizadorOffset">
+          </circle>
+        </svg>
+      </div>
+
+      <!-- Nombres de los estudiantes seleccionados -->
+      <div *ngIf="estudianteSeleccionado">
+        <h3 class="estudiante-seleccionado my-3" [ngClass]="{'text-danger h1': !mostrarTemporizador}">{{ estudianteSeleccionado.grupo1 }}</h3>
+        <h3 class="estudiante-seleccionado" [ngClass]="{'text-danger h1': !mostrarTemporizador}">{{ estudianteSeleccionado.grupo2 }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pregunta y temporizador -->
+  <div *ngIf="preguntaActual" class="row mb-4">
+    <div class="col text-center">
+      <div class="alert alert-info">
+        <h3 class="my-5">{{ preguntaActual }}</h3>
+      </div>
+      <h1 class="fw-bold">Temporizador: {{ tiempoRestante | date: 'mm:ss' }}</h1>
+    </div>
+  </div>
+
+  <div *ngIf="temporizadorFinalizado" class="row mb-4">
+    <div class="col text-center">
+      <button class="btn btn-lg btn-success" (click)="asignarPunto('grupo1')">Asignar Punto al Grupo 1</button>
+      <button class="btn btn-lg btn-success" (click)="asignarPunto('grupo2')">Asignar Punto al Grupo 2</button>
+    </div>
+  </div>
+
+
+
+  <!-- Resto del componente... -->
+</div>

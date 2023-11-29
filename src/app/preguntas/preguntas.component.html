@@ -1,0 +1,36 @@
+<div class="container">
+  <!-- Formulario para agregar preguntas -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Agregar Pregunta</h5>
+          <form (ngSubmit)="agregarPregunta()">
+            <div class="mb-3">
+              <label for="textoPregunta" class="form-label">Texto de la Pregunta</label>
+              <input type="text" class="form-control" id="textoPregunta" [(ngModel)]="textoPregunta" name="textoPregunta" placeholder="Ingrese la pregunta" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Listado de preguntas -->
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Listado de Preguntas</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let pregunta of preguntas; let i = index">
+              {{ pregunta }}
+              <button class="btn btn-danger btn-sm float-end" (click)="eliminarPregunta(i)">Eliminar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
