@@ -1,27 +1,56 @@
-# Competencia
+# Juego de Preguntas y Respuestas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Este proyecto es una aplicación de juego de preguntas y respuestas desarrollada con Angular. Permite a los usuarios sortear estudiantes de dos grupos, mostrar preguntas de un conjunto predefinido y llevar un registro de los puntos anotados por cada grupo.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Sorteo de Estudiantes**: Elige aleatoriamente un estudiante de cada uno de los dos grupos.
+- **Visualización de Preguntas**: Muestra preguntas de un banco de preguntas almacenadas en `localStorage`.
+- **Temporizador**: Cada pregunta tiene un límite de tiempo de 5 minutos para su respuesta.
+- **Asignación de Puntos**: Permite asignar puntos a cada grupo después de responder a las preguntas.
+- **Registro de Puntos**: Lleva un registro de los puntos de cada grupo y almacena esta información en `localStorage`.
 
-## Code scaffolding
+## Tecnologías Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/) para el diseño.
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para instalar y ejecutar el proyecto localmente, sigue estos pasos:
 
-## Running unit tests
+1. Clona el repositorio:
+   ```bash
+   git clone [URL del repositorio]
+   ```
+2. Navega al directorio del proyecto y ejecuta:
+   ```bash
+   npm install
+   ```
+3. Para iniciar el servidor de desarrollo, ejecuta:
+   ```bash
+   ng serve
+   ```
+4. Abre `http://localhost:4200/` en tu navegador para ver la aplicación.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Uso
 
-## Running end-to-end tests
+1. **Sorteo de Estudiantes**: Haz clic en el botón "Sortear Estudiantes" para seleccionar un estudiante de cada grupo de manera aleatoria.
+2. **Responder Preguntas**: Una vez seleccionados los estudiantes, se mostrará una pregunta y comenzará un temporizador de 5 minutos.
+3. **Asignar Puntos**: Al finalizar el tiempo, se pueden asignar puntos al grupo correspondiente.
+4. **Continuar el Juego**: Después de asignar los puntos, se puede proceder con el siguiente sorteo y pregunta.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contribuciones
 
-## Further help
+Las contribuciones son bienvenidas. Por favor, lee `CONTRIBUTING.md` para detalles sobre nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Licencia
+
+Este proyecto está bajo la Licencia [MIT](LICENSE). Consulta el archivo `LICENSE` para obtener más detalles.
+```
+
+### Notas:
+
+- **URL del repositorio**: Deberás reemplazar `[URL del repositorio]` con la URL real de tu repositorio de Git.
+- **`CONTRIBUTING.md` y `LICENSE`**: Si tu proyecto tiene archivos específicos para contribuciones y licencia, menciónalos aquí. De lo contrario, puedes omitir o modificar estas secciones según sea necesario.
+- **Personalización**: Dependiendo de las características exactas de tu aplicación y cualquier otra información relevante (como configuraciones adicionales, opciones avanzadas, etc.), puedes modificar y ampliar este `README.md` para adaptarlo mejor a tu proyecto.
